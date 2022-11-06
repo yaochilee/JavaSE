@@ -11,7 +11,7 @@ public class DirectionGoMain {
 	
 //	public static String direction =  "→←↑↓↘︎↗︎↖︎↙︎";
 	
-	public static String direction =  "→→→→→↗↘↓";
+	public static String direction =  "←←←←←←←←←→→↗↘↓";
 	
 	public static void main(String[] args) {
 		Position position = new Position(2, 1);
@@ -61,8 +61,8 @@ public class DirectionGoMain {
 		int nextRow = position.row + rowGo;
 		int nextColumn = position.column + columnGo;
 		// 檢查是否超過地圖邊界
-		if (maps.length > nextRow) {
-			if (maps[nextRow].length > nextColumn) {
+		if (maps.length > nextRow && nextRow >=0) {
+			if (maps[nextRow].length > nextColumn && nextColumn >= 0) {
 				// 能夠合法動，將位置調整
 				position.row = nextRow;
 				position.column = nextColumn;
